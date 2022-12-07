@@ -42,12 +42,13 @@
 					<td colspan="2">
 						<center>
 							<?php
-								if($fetch['status'] != "Done"){
-									echo 
-									'<a href="update_task.php?task_id='.$fetch['task_id'].'" class="btn btn-success"><span class="glyphicon glyphicon-check"></span></a> |';
-								}
+							if($fetch['status'] != "Done"){
+                            ?>
+                                <a href="update_task.php?task_id=<?php echo $fetch['task_id']?>" class="btn btn-success"><span class="glyphicon glyphicon-check"></span></a>
+                            <?php
+                            }
 							?>
-							 <a href="delete_query.php?task_id=<?php echo $fetch['task_id']?>" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+							<a href="delete_query.php?task_id=<?php echo $fetch['task_id']?>" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
 						</center>
 					</td>
 				</tr>
